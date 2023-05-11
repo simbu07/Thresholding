@@ -1,38 +1,38 @@
 # Thresholding of Images
-## Aim
+### Aim
 To segment the image using global thresholding, adaptive thresholding and Otsu's thresholding using python and OpenCV.
 
-## Software Required
+### Software Required
 1. Anaconda - Python 3.7
 2. OpenCV
 
-## Algorithm
+### Algorithm
 
-## Step1:
+### Step1:
 Load the necessary packages requiured for the processing the threshold of the image.
 
-## Step2:
+### Step2:
 Read the Image using the cv2 instructions and convert it to a grayscale image.
 
-## Step3:
+### Step3:
 Apply global thresholding on the grayscale image and store the results in threshold variables. Use different thresholding methods to segment the image.
 
-## Step4:
+### Step4:
 Apply adaptive thresholding on the grayscale image and store the results in the variables th1 and th2. Use different adaptive thresholding methods to segment the immage.
 
-## Step5:
+### Step5:
 Apply Otsu's method on the grayscale image and store the result in variable th3.
 
-## Step 6:
+### Step 6:
 Create a list titles containing the titles of each image and a list images containing the corresponding images.
 
-## Step 7:
+### Step 7:
 Loop through the images list to display each image alongside its title using plt.subplot(), plt.title(), plt.imshow(), plt.axis(), and plt.show().
 
-## Step 8:
+### Step 8:
 End the program.
 
-## Program
+### Program
 ```
 Developed By: Silambarasan. K
 Register Number: 212221230101
@@ -96,7 +96,7 @@ for i in range(0,9):
     plt.show()
 
 ```
-## Output
+### Output
 
 ### Original Image
 ![s1](https://github.com/simbu07/Thresholding/assets/94525786/a8af1d3f-535b-4632-9456-d23bd1e1aabd)
@@ -117,6 +117,6 @@ for i in range(0,9):
 
 
 
-## Result
+### Result
 Thus the images are segmented using global thresholding, adaptive thresholding and optimum global thresholding using python and OpenCV.
 
