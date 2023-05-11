@@ -1,35 +1,35 @@
-### Thresholding of Images
-### Aim
+# Thresholding of Images
+## Aim
 To segment the image using global thresholding, adaptive thresholding and Otsu's thresholding using python and OpenCV.
 
-### Software Required
+## Software Required
 1. Anaconda - Python 3.7
 2. OpenCV
 
-### Algorithm
+## Algorithm
 
-### Step1:
+## Step1:
 Load the necessary packages requiured for the processing the threshold of the image.
 
-### Step2:
+## Step2:
 Read the Image using the cv2 instructions and convert it to a grayscale image.
 
-### Step3:
+## Step3:
 Apply global thresholding on the grayscale image and store the results in threshold variables. Use different thresholding methods to segment the image.
 
-### Step4:
+## Step4:
 Apply adaptive thresholding on the grayscale image and store the results in the variables th1 and th2. Use different adaptive thresholding methods to segment the immage.
 
-### Step5:
+## Step5:
 Apply Otsu's method on the grayscale image and store the result in variable th3.
 
-### Step 6:
+## Step 6:
 Create a list titles containing the titles of each image and a list images containing the corresponding images.
 
-### Step 7:
+## Step 7:
 Loop through the images list to display each image alongside its title using plt.subplot(), plt.title(), plt.imshow(), plt.axis(), and plt.show().
 
-### Step 8:
+## Step 8:
 End the program.
 
 ## Program
@@ -39,7 +39,7 @@ Register Number: 212221230101
 Program to segment the image using global thresholding, adaptive thresholding and Otsu's thresholding using python and OpenCV.
 ```
 
-```
+```py
 # Load the necessary packages:
 
 import cv2
@@ -47,14 +47,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ```
-```
+```py
 # Read the Image and convert to grayscale:
 
 image=cv2.imread("cr.jpg")
 image1=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 ```
 
-```
+```py
 # Use Global thresholding to segment the image:
 
 ret, thresh1 = cv2.threshold(image1,100,220,cv2.THRESH_BINARY)
@@ -64,20 +64,20 @@ ret, thresh4 = cv2.threshold(image1,100,200,cv2.THRESH_TOZERO)
 ret, thresh5 = cv2.threshold(image1,225,270,cv2.THRESH_TOZERO_INV)
 ```
 
-```
+```py
 # Use Adaptive thresholding to segment the image:
 
 th1 = cv2.adaptiveThreshold(image1, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 3)
 th2 = cv2.adaptiveThreshold(image1, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 3)
 ```
 
-```
+```py
 # Use Otsu's method to segment the image:
 
 ret2, th3 = cv2.threshold(image1, 150, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 ```
 
-```
+```py
 # Display the results:
 
 titles=["Gray Image","Threshold Image (Binary)","Threshold Image (Binary Inverse)","Threshold Image (Truncate)",
